@@ -1,0 +1,61 @@
+.container {
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+
+  .left {
+    width: 600px;
+    height: 500px;
+    background-color: black;
+    animation: left 2s infinite alternate;
+    clip-path: polygon(0 0, 53% 0, 93% 11%, 92% 88%, 51% 100%, 0 100%);
+}
+
+  .right {
+    width: 600px;
+    height: 500px;
+    background-color: black;
+    animation: right 2s infinite alternate;
+    /* clip-path: polygon(100% 0, 49% 0, 8% 9%, 8% 89%, 49% 100%, 100% 100%); */
+    clip-path: polygon(100% 0, 47% 0, 7% 11%, 8% 88%, 49% 100%, 100% 100%);
+}
+}
+h2 {
+  font-size: 100px;
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  z-index: -1;
+}
+
+@keyframes left {
+  0% {
+    clip-path: polygon(0 0, 53% 0, 100% 0, 100% 100%, 51% 100%, 0 100%);
+  }
+  30% {
+    background-color: black;
+  }
+  90% {
+    background-color: blue;
+  }
+  100% {
+    clip-path: polygon(0 0, 53% 0, 93% 11%, 92% 88%, 51% 100%, 0 100%);
+  }
+}
+@keyframes right {
+  0% {
+    clip-path: polygon(100% 0, 49% 0, 0 0, 0 100%, 49% 100%, 100% 100%);
+  }
+  30% {
+    background-color: black;
+  }       
+  90% {
+    background-color: blue;
+  }
+  100% {
+    background-color: black;
+    clip-path: polygon(100% 0, 47% 0, 7% 11%, 8% 88%, 49% 100%, 100% 100%);
+  }
+}
